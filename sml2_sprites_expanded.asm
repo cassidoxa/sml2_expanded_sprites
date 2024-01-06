@@ -8,7 +8,7 @@
 ; that might clarify what a sprite map is used for.
 ;
 ; The sprite map entries are four bytes per 8x8 sprite (same as gameboy OAM) with a terminating
-; byte $80. They are laid out as follows: X position, Y position, Tile Index, and Properties
+; byte $80. They are laid out as follows: Y position, X position, Tile Index, and Properties
 ; (see: https://gbdev.io/pandocs/OAM.html). The X and Y integers are signed such that $00 is
 ; an origin of sorts. To move sprites:
 ;

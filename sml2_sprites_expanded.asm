@@ -23,6 +23,11 @@
 ; corresponding _feather/_no_feather pointers can be replaced.
 
 SECTION "Expanded Sprite Maps", ROMX[$7000], BANK[1]
+
+;------------------------------------------------------------------------------
+; Small Mario Sprite Maps
+;------------------------------------------------------------------------------
+
 SmallRight:
 	db $FC, $F8, $41, $20
 	db $FC, $00, $40, $20
@@ -166,7 +171,45 @@ SmallLedgeHopLeft:
 	db $0C, $00, $69, $00
 	db $80 ;end sprite
 
-; The regular big mario sprite has the fire flower feather prepended to the map.
+SmallSwimIdleRight:
+	db $FC, $F8, $41, $20
+	db $FC, $00, $40, $20
+	db $04, $F8, $43, $20
+	db $04, $00, $42, $20
+	db $0C, $F8, $45, $20
+	db $0C, $00, $44, $20
+	db $80 ;end sprite
+
+SmallSwimIdleLeft:
+	db $FC, $F8, $40, $00
+	db $FC, $00, $41, $00
+	db $04, $F8, $42, $00
+	db $04, $00, $43, $00
+	db $0C, $F8, $44, $00
+	db $0C, $00, $45, $00
+	db $80 ;end sprite
+
+SmallSwimStrokeRight:
+	db $FC, $F8, $41, $20
+	db $FC, $00, $40, $20
+	db $04, $F8, $47, $20
+	db $04, $00, $46, $20
+	db $0C, $F8, $4B, $20
+	db $0C, $00, $4A, $20
+	db $80 ;end sprite
+
+SmallSwimStrokeLeft:
+	db $FC, $F8, $40, $00
+	db $FC, $00, $41, $00
+	db $04, $F8, $46, $00
+	db $04, $00, $47, $00
+	db $0C, $F8, $4A, $00
+	db $0C, $00, $4B, $00
+	db $80 ;end sprite
+
+;------------------------------------------------------------------------------
+; Big Mario/Fire Mario Sprite Maps
+;------------------------------------------------------------------------------
 BigRight_feather:
 	db $F4, $FD, $1E, $20
 BigRight_no_feather:
@@ -397,6 +440,64 @@ BigLedgeHopLeft_no_feather:
 	db $0C, $00, $39, $00
 	db $80 ;end sprite
 
+BigSwimIdleRight_feather:
+	db $F4, $FC, $1E, $20
+BigSwimIdleRight_no_feather:
+	db $F4, $F8, $01, $20
+	db $F4, $00, $00, $20
+	db $FC, $F8, $11, $20
+	db $FC, $00, $10, $20
+	db $04, $F0, $04, $20
+	db $04, $F8, $03, $20
+	db $04, $00, $02, $20
+	db $0C, $F4, $06, $20
+	db $0C, $FC, $05, $20
+	db $80 ;end sprite
+
+BigSwimIdleLeft_feather:
+	db $F4, $FC, $1E, $00
+BigSwimIdleLeft_no_feather:
+	db $F4, $F8, $00, $00
+	db $F4, $00, $01, $00
+	db $FC, $F8, $10, $00
+	db $FC, $00, $11, $00
+	db $04, $F8, $02, $00
+	db $04, $00, $03, $00
+	db $04, $08, $04, $00
+	db $0C, $FC, $05, $00
+	db $0C, $04, $06, $00
+	db $80 ;end sprite
+
+BigSwimStrokeRight_feather:
+	db $F4, $FC, $1E, $20
+BigSwimStrokeRight_no_feather:
+	db $F4, $F8, $01, $20
+	db $F4, $00, $00, $20
+	db $FC, $F8, $11, $20
+	db $FC, $00, $10, $20
+	db $04, $F0, $0C, $20
+	db $04, $F8, $0B, $20
+	db $04, $00, $0A, $20
+	db $0C, $F0, $0F, $20
+	db $0C, $F8, $0E, $20
+	db $0C, $00, $0D, $20
+	db $80 ;end sprite
+
+BigSwimStrokeLeft_feather:
+	db $F4, $FC, $1E, $00
+BigSwimStrokeLeft_no_feather:
+	db $F4, $F8, $00, $00
+	db $F4, $00, $01, $00
+	db $FC, $F8, $10, $00
+	db $FC, $00, $11, $00
+	db $04, $F8, $0A, $00
+	db $04, $00, $0B, $00
+	db $04, $08, $0C, $00
+	db $0C, $F8, $0D, $00
+	db $0C, $00, $0E, $00
+	db $0C, $08, $0F, $00
+	db $80 ;end sprite
+
 ShootFireStandingRight:
 	db $F4, $FD, $1E, $20
 	db $F4, $F9, $01, $20
@@ -544,6 +645,9 @@ ShootFireTurnLeft:
 	db $0C, $08, $3A, $20
 	db $80 ;end sprite
 
+;------------------------------------------------------------------------------
+; Bunny Mario Sprite Maps
+;------------------------------------------------------------------------------
 BunnyRight:
 	db $F4, $F9, $75, $20
 	db $F4, $01, $74, $20
@@ -744,6 +848,55 @@ BunnyLedgeHopLeft:
 	db $0C, $00, $39, $00
 	db $80 ;end sprite
 
+BunnySwimIdleRight:
+	db $F4, $F8, $75, $20
+	db $F4, $00, $74, $20
+	db $FC, $F8, $11, $20
+	db $FC, $00, $10, $20
+	db $04, $F0, $04, $20
+	db $04, $F8, $03, $20
+	db $04, $00, $02, $20
+	db $0C, $F4, $06, $20
+	db $0C, $FC, $05, $20
+	db $80 ;end sprite
+
+BunnySwimIdleLeft:
+	db $F4, $F8, $74, $00
+	db $F4, $00, $75, $00
+	db $FC, $F8, $10, $00
+	db $FC, $00, $11, $00
+	db $04, $F8, $02, $00
+	db $04, $00, $03, $00
+	db $04, $08, $04, $00
+	db $0C, $FC, $05, $00
+	db $0C, $04, $06, $00
+	db $80 ;end sprite
+
+BunnySwimStrokeRight:
+	db $F4, $F8, $77, $20
+	db $F4, $00, $76, $20
+	db $FC, $F8, $11, $20
+	db $FC, $00, $10, $20
+	db $04, $F0, $0C, $20
+	db $04, $F8, $0B, $20
+	db $04, $00, $0A, $20
+	db $0C, $F0, $0F, $20
+	db $0C, $F8, $0E, $20
+	db $0C, $00, $0D, $20
+	db $80 ;end sprite
+
+BunnySwimStrokeLeft:
+	db $F4, $F8, $76, $00
+	db $F4, $00, $77, $00
+	db $FC, $F8, $10, $00
+	db $FC, $00, $11, $00
+	db $04, $F8, $0A, $00
+	db $04, $00, $0B, $00
+	db $04, $08, $0C, $00
+	db $0C, $F8, $0D, $00
+	db $0C, $00, $0E, $00
+	db $0C, $08, $0F, $00
+	db $80 ;end sprite
 ENDSECTION
 
 
@@ -756,7 +909,7 @@ dw BigLeft_no_feather
 dw BigRunLeftAnimationOne_no_feather
 dw BigRunLeftAnimationTwo_no_feather
 dw BigRunLeftAnimationThree_no_feather
-dw BigJumpRight_no_feather
+dw BigJumpRight_no_feather ; 10
 dw BigJumpLeft_no_feather
 dw BigLedgeHopRight_no_feather
 dw BigLedgeHopLeft_no_feather
@@ -764,13 +917,17 @@ dw BigTurnLeft_no_feather
 dw BigTurnRight_no_feather
 dw BigCrouchRight_no_feather
 dw BigCrouchLeft_no_feather
-dw BigSpinFront_no_feather
+dw BigSpinFront_no_feather ; 20
 dw BigSpinBack_no_feather
+dw BigSwimIdleRight_no_feather
+dw BigSwimStrokeRight_no_feather
+dw BigSwimIdleLeft_no_feather
+dw BigSwimStrokeLeft_no_feather
  
 ENDSECTION
 
 
-SECTION "Small Mario Sprite Map Pointers", ROMX[$4040], BANK[1]
+SECTION "Small Mario Sprite Map Pointers 1", ROMX[$4040], BANK[1]
 
 dw SmallRight
 dw SmallRunAnimationRightOne
@@ -792,6 +949,15 @@ dw SmallCrouchLeft
 ENDSECTION
 
 
+SECTION "Small Mario Sprite Map Pointers 2", ROMX[$4064], BANK[1]
+
+dw SmallSwimIdleRight
+dw SmallSwimStrokeRight
+dw SmallSwimIdleLeft
+dw SmallSwimStrokeLeft
+
+ENDSECTION
+
 SECTION "Fire Mario Sprite Map Pointers 1", ROMX[$40E0], BANK[1]
 
 dw BigRight_feather
@@ -802,7 +968,7 @@ dw BigLeft_feather
 dw BigRunLeftAnimationOne_feather
 dw BigRunLeftAnimationTwo_feather
 dw BigRunLeftAnimationThree_feather
-dw BigJumpRight_feather ; 10
+dw BigJumpRight_feather ; F0
 dw BigJumpLeft_feather
 dw BigLedgeHopRight_feather
 dw BigLedgeHopLeft_feather
@@ -810,8 +976,12 @@ dw BigTurnLeft_feather
 dw BigTurnRight_feather
 dw BigCrouchRight_feather
 dw BigCrouchLeft_feather
-dw BigSpinFront_feather ; 20
+dw BigSpinFront_feather ; 100
 dw BigSpinBack_feather
+dw BigSwimIdleRight_feather
+dw BigSwimStrokeRight_feather
+dw BigSwimIdleLeft_feather
+dw BigSwimStrokeLeft_feather
 
 ENDSECTION
 
@@ -862,7 +1032,17 @@ dw BunnyCrouchLeft
 
 ENDSECTION
 
-SECTION "Bunny Mario Sprite Map Pointers 2", ROMX[$40CE], BANK[1]
+
+SECTION "Bunny Mario Sprite Map Pointers 2", ROMX[$40AE], BANK[1]
+
+dw BunnySwimIdleRight
+dw BunnySwimStrokeRight
+dw BunnySwimIdleLeft
+dw BunnySwimStrokeLeft
+
+ENDSECTION
+
+SECTION "Bunny Mario Sprite Map Pointers 3", ROMX[$40CE], BANK[1]
 
 dw BunnyJumpEarsUpRight
 dw BunnyJumpEarsUpLeft
